@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://github.com/RatoST/my-app.git",
+  "homepage": "https://github.com/RatoST/my-app.git",
   "devDependencies": {
     "eslint": "2.8.0",
     "eslint-config-airbnb": "7.0.0",
@@ -17,8 +17,8 @@
     "react-scripts": "3.0.0"
   },
   "scripts": {
-    "predeploy":"npm run build",
-    "deploy":"my-app -d build",
+    "predeploy": "npm run build",
+    "deploy": "my-app -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
