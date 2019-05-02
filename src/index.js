@@ -1,3 +1,4 @@
+//Version 1.0.2. 05.02.08.23
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
