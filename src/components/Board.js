@@ -2,11 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Square(props) {
+  const { onClick, value } = props;
   return (
-    <button type="submit" className="square" onClick={props.onClick}>
-      {props.value}
+    <button type="submit" className="square" onClick={onClick}>
+      {value}
     </button>
-    //<button type="submit" className="square" onClick={props.onClick}>{props.value}
+
   );
 }
 
