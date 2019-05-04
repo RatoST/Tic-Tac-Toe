@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 
 function Square(props) {
   return (
-    <button className="square" onClick={props.onClick}>
+    <button type="submit" className="square" onClick={props.onClick}>
       {props.value}
     </button>
+    //<button type="submit" className="square" onClick={props.onClick}>{props.value}
   );
 }
 
@@ -16,12 +17,13 @@ Square.propTypes = {
 
 
 class Board extends React.Component {
-
   renderSquare(i) {
+    const { squares, onClick } = this.props;
     return (
-      <Square value={this.props.squares[i]} onClick={() => this.props.onClick(i)} />
+      <Square value={squares[i]} onClick={() => onClick(i)} />
     );
   }
+
   render() {
     return (
       <div>
