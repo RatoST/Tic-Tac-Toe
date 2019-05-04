@@ -1,4 +1,5 @@
 import React from 'react';
+import uuid from 'uuid';
 import Board from './Board';
 
 class Game extends React.Component {
@@ -71,7 +72,7 @@ class Game extends React.Component {
         `Go to move #${move}` :
         'Go to game start';
       return (
-        <li key={step}>
+        <li key={uuid.v4()}>
           <button type="submit" onClick={() => this.jumpTo(move)}>{desc}</button>
         </li>
       );
