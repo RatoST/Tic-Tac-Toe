@@ -42,6 +42,8 @@ class Game extends React.Component {
     const hist = history.slice(0, stepNumber + 1);
     const current = hist[hist.length - 1];
     const squares = current.squares.slice();
+
+
     if (this.calculateWinner(squares) || squares[i]) {
       return;
     }
@@ -79,8 +81,12 @@ class Game extends React.Component {
     });
 
     let status;
-    if (winner) {
-      status = `Winner: ${winner}`;
+    if (winner !== null) {
+      status = 'The match is draw';
+
+      if (winner) {
+        status = `Winner: ${winner}`;
+      }
     } else {
       status = `Next player: ${xIsNext ? 'X' : 'O'}`;
     }

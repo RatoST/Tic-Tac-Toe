@@ -13,7 +13,7 @@ function Square(props) {
 
 Square.propTypes = {
   onClick: PropTypes.func,
-  value: PropTypes.number,
+  value: PropTypes.string,
 };
 
 
@@ -50,7 +50,7 @@ class Board extends React.Component {
 
 Board.propTypes = {
   onClick: PropTypes.func,
-  squares: PropTypes.number,
+  squares: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default Board;
