@@ -83,16 +83,15 @@ class Game extends React.Component {
     let status;
     // if (winner) means the same thing as this (if winner is truthy)
     // check 'JS truthy' online if you've never heard of that
-    if (winner !== null) {
+    if (stepNumber === 10) {
       // have you seen in debugger that it never enters here? Why is that?
 
       // How will you know if it's a draw?
       // Where are you actually checking that part?
       status = 'The match is draw';
-
-      if (winner) {
-        status = `Winner: ${winner}`;
-      }
+    }
+    if (winner) {
+      status = `Winner: ${winner}`;
     } else {
       status = `Next player: ${xIsNext ? 'X' : 'O'}`;
     }
