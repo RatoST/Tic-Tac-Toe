@@ -81,6 +81,8 @@ class Game extends React.Component {
     });
 
     let status;
+
+    /*
     // if (winner) means the same thing as this (if winner is truthy)
     // check 'JS truthy' online if you've never heard of that
     if (winner) {
@@ -94,6 +96,16 @@ class Game extends React.Component {
       status = `Next player: ${xIsNext ? 'X' : 'O'}`;
     } else {
       status = 'The match is draw';
+    }
+    */
+
+    // Winner and Draw are mutualy exclusive, so Why not something like this:
+    if (winner) {
+      status = `Winner: ${winner}`;
+    } else {
+      // if you don't know this syntax - it's a ternary operator, same as if/else
+      // which has the following syntax: <if-expression> ? <use-if-true> : <use-if-false>
+      status = stepNumber === 9 ? 'It\'s a draw' : `Next player: ${xIsNext ? 'X' : 'O'}`;
     }
 
     return (
