@@ -102,10 +102,10 @@ class Game extends React.Component {
     // Winner and Draw are mutualy exclusive, so Why not something like this:
     if (winner) {
       status = `Winner: ${winner}`;
+    } else if (stepNumber === 9) {
+      status = 'It\'s a draw';
     } else {
-      // if you don't know this syntax - it's a ternary operator, same as if/else
-      // which has the following syntax: <if-expression> ? <use-if-true> : <use-if-false>
-      status = stepNumber === 9 ? 'It\'s a draw' : `Next player: ${xIsNext ? 'X' : 'O'}`;
+      status = `Next player: ${xIsNext ? 'X' : 'O'}`;
     }
 
     return (
