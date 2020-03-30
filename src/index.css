@@ -1,7 +1,15 @@
 body {
+  background-color: #e5fff1;
+  background-image: url("https://www.transparenttextures.com/patterns/batthern.png");
   font: 16px "Century Gothic", Futura, sans-serif;
-  margin: 20px;
+  margin: 1rem auto;
+  max-width: 50em;
   padding: 10px;
+}
+
+h1 {
+  color: #033319;
+  text-align: center;
 }
 
 ol, ul {
